@@ -12,20 +12,16 @@
 #define chip8_h
 
 #define NUM_OF_REGISTERS 16
+#define STACK_DEPTH 16
+#define MEMORY_SIZE 4096
+
+#define NUM_OF_KEYS 16
+
 #define DISPLAY_HEIGHT 64
 #define DISPLAY_WIDTH 32
 
 public class Chip8
 {
-    // 4096 memory locations of 8 bits
-    // first 512 reserved for interpreter
-    // Uppermost 256 reserved for display refresh
-    // 96 below that are for call stack, internal use, etc.
-  
-    // 16 8-bit registers V0 to VF, where VF is carry flag
-    // Reserve 64 bytes for call stack
-  
-    // two timers at 60 HZ: Delay, Sound
   
     // Hex keyboard
   
@@ -38,7 +34,42 @@ public class Chip8
     // is drawn and set to 0 otherwise.
   
 private:
-  unsigned char V[NUM_OF_REGISTERS];
+  
+  // 4096 memory locations of 8
+  // first 512 reserved for font set
+  // Uppermost 256 reserved for display refresh
+  // 96 below that are for call stack, internal use, etc.
+  
+  unsigned char main_memory[MEMORY_SIZE];
+  
+  unsigned char V[NUM_OF_REGISTERS];  // Register Bank, with VF for carry
+  
+  unsigned short stack[STACK_DEPTH];  // Call stack
+  unsigned short sp;                  // Current stack pointer
+  
+  unsigned short I;                   // Instruction Register (16 bits)
+  unsigned short pc;                  // Program Counter
+  
+  unsigned short opcode;              // Current Opcode
+  
+  // two timers at 60 HZ
+  unsigned char delay_timer;
+  unsigned char sound_timer;
+  
+  
+  unsigned char key[NUM_OF_KEYS];     // Input
+  
+  // Graphics Pixel Map
+  unsigned char gfx[DISPLAY_HEIGHT * DISPLAY_WIDTH];
+  
+  
+  
+  
+  void Fetch();
+  void Decode();
+  void Execute();
+  
+  
   
   
 };
