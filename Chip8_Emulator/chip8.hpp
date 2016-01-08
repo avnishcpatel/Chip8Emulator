@@ -1,5 +1,5 @@
 //
-//  chip8.h
+//  chip8.hpp
 //  Chip8_Emulator
 //
 //  Interface for Chip8 CPU Emulator
@@ -20,8 +20,11 @@
 #define DISPLAY_HEIGHT 64
 #define DISPLAY_WIDTH 32
 
-public class Chip8
-{
+class chip8 {
+  
+public:
+  chip8() { };
+  ~chip8() {};
   
 private:
   

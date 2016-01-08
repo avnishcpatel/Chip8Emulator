@@ -24,8 +24,8 @@
 
 /* Begin PBXFileReference section */
 		BDCC62FB1C40426D005ED156 /* Chip8_Emulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chip8_Emulator; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDCC62FE1C40426D005ED156 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		BDCC63051C4042D4005ED156 /* chip8.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chip8.hpp; sourceTree = "<group>"; };
+		BDCC62FE1C40426D005ED156 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Chip8_Emulator/main.cpp; sourceTree = SOURCE_ROOT; };
+		BDCC63051C4042D4005ED156 /* chip8.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; name = chip8.hpp; path = Chip8_Emulator/chip8.hpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
