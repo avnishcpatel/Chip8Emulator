@@ -8,8 +8,8 @@
 //  Copyright © 2016 masuroson. All rights reserved.
 //
 
-#ifndef chip8_h
-#define chip8_h
+#ifndef chip8_hpp
+#define chip8_hpp
 
 #define NUM_OF_REGISTERS 16
 #define STACK_DEPTH 16
@@ -22,16 +22,6 @@
 
 public class Chip8
 {
-  
-    // Hex keyboard
-  
-    // Display Resolution : 64 x 32
-    // Graphics are drawn to the screen solely by drawing sprites,
-    // which are 8 pixels wide and may be from 1 to 15 pixels in height.
-    // Sprite pixels that are set flip the color of the corresponding screen
-    // pixel, while unset sprite pixels do nothing. The carry flag (VF) is set
-    // to 1 if any screen pixels are flipped from set to unset when a sprite
-    // is drawn and set to 0 otherwise.
   
 private:
   
@@ -59,20 +49,22 @@ private:
   
   unsigned char key[NUM_OF_KEYS];     // Input
   
+  
+  // Display Resolution : 64 x 32
+  // Graphics are drawn to the screen solely by drawing sprites,
+  // which are 8 pixels wide and may be from 1 to 15 pixels in height.
+  // Sprite pixels that are set flip the color of the corresponding screen
+  // pixel, while unset sprite pixels do nothing. The carry flag (VF) is set
+  // to 1 if any screen pixels are flipped from set to unset when a sprite
+  // is drawn and set to 0 otherwise.
   // Graphics Pixel Map
   unsigned char gfx[DISPLAY_HEIGHT * DISPLAY_WIDTH];
-  
-  
-  
   
   void Fetch();
   void Decode();
   void Execute();
   
-  
-  
-  
 };
 
 
-#endif /* chip8_h */
+#endif /* chip8_hpp */

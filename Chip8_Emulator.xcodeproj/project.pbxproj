@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		BDCC62FB1C40426D005ED156 /* Chip8_Emulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chip8_Emulator; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCC62FE1C40426D005ED156 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		BDCC63051C4042D4005ED156 /* chip8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chip8.h; sourceTree = "<group>"; };
+		BDCC63051C4042D4005ED156 /* chip8.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = chip8.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				BDCC62FE1C40426D005ED156 /* main.cpp */,
-				BDCC63051C4042D4005ED156 /* chip8.h */,
+				BDCC63051C4042D4005ED156 /* chip8.hpp */,
 			);
 			path = Chip8_Emulator;
 			sourceTree = "<group>";
@@ -239,6 +239,7 @@
 				BDCC63041C40426D005ED156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
