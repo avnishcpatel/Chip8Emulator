@@ -9,8 +9,10 @@
 #include <iostream>
 #include "chip8.hpp"
 
+chip8 myChip8; // Declare globally
+
 int main(int argc, const char * argv[])
 {
-  chip8 myChip8;
+  
   return 0;
 }

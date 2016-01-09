@@ -23,8 +23,43 @@
 class chip8 {
   
 public:
-  chip8() { };
-  ~chip8() {};
+  
+  chip8()
+  {
+    initialize();
+  }
+  
+  ~chip8() {}
+  
+  unsigned char * getGFX() { return gfx; }
+  unsigned char * getKeys() { return keys; }  //
+  
+  bool drawFlagIsSet() { return drawFlag; }
+  
+  void initialize()
+  {
+    sp = I = pc = opcode = NULL;
+  
+    memset(main_memory, NULL, MEMORY_SIZE);
+    memset(V, NULL, NUM_OF_REGISTERS);
+    memset(stack, NULL, STACK_DEPTH);
+    memset(keys, NULL, NUM_OF_KEYS);
+    memset(gfx, NULL, DISPLAY_HEIGHT * DISPLAY_WIDTH);
+  
+    drawFlag = false;
+  }
+  
+  void emulateCycle()
+  {
+    // FETCH
+    opcode = main_memory[pc] << 8 | main_memory[pc + 1];
+    // DECODE
+    // void (*fp)();
+    decodeInstruction(opcode);
+    // EXECUTE
+  }
+  
+  
   
 private:
   
@@ -50,7 +85,7 @@ private:
   unsigned char sound_timer;
   
   
-  unsigned char key[NUM_OF_KEYS];     // Input
+  unsigned char keys[NUM_OF_KEYS];     // Input
   
   
   // Display Resolution : 64 x 32
@@ -63,9 +98,14 @@ private:
   // Graphics Pixel Map
   unsigned char gfx[DISPLAY_HEIGHT * DISPLAY_WIDTH];
   
-  void Fetch();
-  void Decode();
-  void Execute();
+  bool drawFlag;
+  
+  
+  /* Returns appropriate function pointer with appropriate args using opcode */
+  void decodeInstruction(unsigned short opcode)
+  {
+     
+  }
   
 };
 
