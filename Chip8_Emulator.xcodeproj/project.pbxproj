@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD7D64131C4C7CDB001DA666 /* chip8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD7D64121C4C7CDB001DA666 /* chip8.cpp */; };
+		BDB7A5751C40D7BF00A2D588 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7A5741C40D7BE00A2D588 /* QuartzCore.framework */; };
+		BDB7A5771C40D7C500A2D588 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7A5761C40D7C500A2D588 /* OpenGL.framework */; };
+		BDB7A5791C40D7C900A2D588 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7A5781C40D7C900A2D588 /* Cocoa.framework */; };
+		BDB7A57B1C40D7CF00A2D588 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7A57A1C40D7CF00A2D588 /* IOKit.framework */; };
+		BDB7A57E1C40DB2100A2D588 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7A57C1C40DB2100A2D588 /* GLKit.framework */; };
+		BDB7A57F1C40DB2100A2D588 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7A57D1C40DB2100A2D588 /* GLUT.framework */; };
 		BDCC62FF1C40426D005ED156 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDCC62FE1C40426D005ED156 /* main.cpp */; };
+		BDE585481C46FF0800000BFD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDE585471C46FF0800000BFD /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,16 +28,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		BDE585431C46FF0800000BFD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD7D64121C4C7CDB001DA666 /* chip8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chip8.cpp; sourceTree = "<group>"; };
+		BD7D64151C4C85A8001DA666 /* chip8_opcodes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = chip8_opcodes.hpp; sourceTree = "<group>"; };
+		BDB7A5741C40D7BE00A2D588 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BDB7A5761C40D7C500A2D588 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		BDB7A5781C40D7C900A2D588 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BDB7A57A1C40D7CF00A2D588 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		BDB7A57C1C40DB2100A2D588 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		BDB7A57D1C40DB2100A2D588 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		BDCC62FB1C40426D005ED156 /* Chip8_Emulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chip8_Emulator; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCC62FE1C40426D005ED156 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Chip8_Emulator/main.cpp; sourceTree = SOURCE_ROOT; };
 		BDCC63051C4042D4005ED156 /* chip8.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; name = chip8.hpp; path = Chip8_Emulator/chip8.hpp; sourceTree = SOURCE_ROOT; };
+		BDE585451C46FF0800000BFD /* Chip8_Emulator_Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chip8_Emulator_Tests; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE585471C46FF0800000BFD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BDCC62F81C40426D005ED156 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB7A57E1C40DB2100A2D588 /* GLKit.framework in Frameworks */,
+				BDB7A57F1C40DB2100A2D588 /* GLUT.framework in Frameworks */,
+				BDB7A57B1C40D7CF00A2D588 /* IOKit.framework in Frameworks */,
+				BDB7A5791C40D7C900A2D588 /* Cocoa.framework in Frameworks */,
+				BDB7A5771C40D7C500A2D588 /* OpenGL.framework in Frameworks */,
+				BDB7A5751C40D7BF00A2D588 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE585421C46FF0800000BFD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,7 +83,14 @@
 			isa = PBXGroup;
 			children = (
 				BDCC62FD1C40426D005ED156 /* Chip8_Emulator */,
+				BDE585461C46FF0800000BFD /* Chip8_Emulator_Tests */,
 				BDCC62FC1C40426D005ED156 /* Products */,
+				BDB7A57C1C40DB2100A2D588 /* GLKit.framework */,
+				BDB7A57D1C40DB2100A2D588 /* GLUT.framework */,
+				BDB7A57A1C40D7CF00A2D588 /* IOKit.framework */,
+				BDB7A5781C40D7C900A2D588 /* Cocoa.framework */,
+				BDB7A5761C40D7C500A2D588 /* OpenGL.framework */,
+				BDB7A5741C40D7BE00A2D588 /* QuartzCore.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				BDCC62FB1C40426D005ED156 /* Chip8_Emulator */,
+				BDE585451C46FF0800000BFD /* Chip8_Emulator_Tests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +108,18 @@
 			children = (
 				BDCC62FE1C40426D005ED156 /* main.cpp */,
 				BDCC63051C4042D4005ED156 /* chip8.hpp */,
+				BD7D64121C4C7CDB001DA666 /* chip8.cpp */,
+				BD7D64151C4C85A8001DA666 /* chip8_opcodes.hpp */,
 			);
 			path = Chip8_Emulator;
+			sourceTree = "<group>";
+		};
+		BDE585461C46FF0800000BFD /* Chip8_Emulator_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BDE585471C46FF0800000BFD /* main.cpp */,
+			);
+			path = Chip8_Emulator_Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +142,23 @@
 			productReference = BDCC62FB1C40426D005ED156 /* Chip8_Emulator */;
 			productType = "com.apple.product-type.tool";
 		};
+		BDE585441C46FF0800000BFD /* Chip8_Emulator_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE585491C46FF0800000BFD /* Build configuration list for PBXNativeTarget "Chip8_Emulator_Tests" */;
+			buildPhases = (
+				BDE585411C46FF0800000BFD /* Sources */,
+				BDE585421C46FF0800000BFD /* Frameworks */,
+				BDE585431C46FF0800000BFD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chip8_Emulator_Tests;
+			productName = Chip8_Emulator_Tests;
+			productReference = BDE585451C46FF0800000BFD /* Chip8_Emulator_Tests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +170,9 @@
 				TargetAttributes = {
 					BDCC62FA1C40426D005ED156 = {
 						CreatedOnToolsVersion = 7.1.1;
+					};
+					BDE585441C46FF0800000BFD = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -111,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				BDCC62FA1C40426D005ED156 /* Chip8_Emulator */,
+				BDE585441C46FF0800000BFD /* Chip8_Emulator_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7D64131C4C7CDB001DA666 /* chip8.cpp in Sources */,
 				BDCC62FF1C40426D005ED156 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE585411C46FF0800000BFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE585481C46FF0800000BFD /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,11 +297,28 @@
 		BDCC63031C40426D005ED156 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		BDCC63041C40426D005ED156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BDE5854A1C46FF0800000BFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BDE5854B1C46FF0800000BFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -237,6 +342,15 @@
 			buildConfigurations = (
 				BDCC63031C40426D005ED156 /* Debug */,
 				BDCC63041C40426D005ED156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE585491C46FF0800000BFD /* Build configuration list for PBXNativeTarget "Chip8_Emulator_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE5854A1C46FF0800000BFD /* Debug */,
+				BDE5854B1C46FF0800000BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

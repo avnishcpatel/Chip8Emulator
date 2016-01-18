@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Chip8_Emulator_Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>BDCC62FA1C40426D005ED156</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDE585441C46FF0800000BFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

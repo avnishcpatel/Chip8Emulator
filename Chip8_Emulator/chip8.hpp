@@ -11,57 +11,50 @@
 #ifndef chip8_hpp
 #define chip8_hpp
 
-#define NUM_OF_REGISTERS 16
-#define STACK_DEPTH 16
-#define MEMORY_SIZE 4096
+#include <cstring>
+#include "chip8_opcodes.hpp"
 
-#define NUM_OF_KEYS 16
-
-#define DISPLAY_HEIGHT 64
-#define DISPLAY_WIDTH 32
 
 class chip8 {
   
 public:
   
-  chip8()
-  {
-    initialize();
-  }
+  chip8() { initialize(); }
   
-  ~chip8() {}
+  ~chip8() { }
   
   unsigned char * getGFX() { return gfx; }
   unsigned char * getKeys() { return keys; }  //
   
   bool drawFlagIsSet() { return drawFlag; }
   
-  void initialize()
-  {
-    sp = I = pc = opcode = NULL;
+  /* Set up emulator to valid start state */
+  void initialize();
   
-    memset(main_memory, NULL, MEMORY_SIZE);
-    memset(V, NULL, NUM_OF_REGISTERS);
-    memset(stack, NULL, STACK_DEPTH);
-    memset(keys, NULL, NUM_OF_KEYS);
-    memset(gfx, NULL, DISPLAY_HEIGHT * DISPLAY_WIDTH);
-  
-    drawFlag = false;
-  }
-  
-  void emulateCycle()
-  {
-    // FETCH
-    opcode = main_memory[pc] << 8 | main_memory[pc + 1];
-    // DECODE
-    // void (*fp)();
-    decodeInstruction(opcode);
-    // EXECUTE
-  }
-  
-  
+  /* Emulate a single cycle of emulation */
+  void emulateCycle();
   
 private:
+  
+  unsigned char chip8_fontset[FONT_SET_SIZE] =
+  {
+    0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
+    0x20, 0x60, 0x20, 0x20, 0x70, // 1
+    0xF0, 0x10, 0xF0, 0x80, 0xF0, // 2
+    0xF0, 0x10, 0xF0, 0x10, 0xF0, // 3
+    0x90, 0x90, 0xF0, 0x10, 0x10, // 4
+    0xF0, 0x80, 0xF0, 0x10, 0xF0, // 5
+    0xF0, 0x80, 0xF0, 0x90, 0xF0, // 6
+    0xF0, 0x10, 0x20, 0x40, 0x40, // 7
+    0xF0, 0x90, 0xF0, 0x90, 0xF0, // 8
+    0xF0, 0x90, 0xF0, 0x10, 0xF0, // 9
+    0xF0, 0x90, 0xF0, 0x90, 0x90, // A
+    0xE0, 0x90, 0xE0, 0x90, 0xE0, // B
+    0xF0, 0x80, 0x80, 0x80, 0xF0, // C
+    0xE0, 0x90, 0x90, 0x90, 0xE0, // D
+    0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
+    0xF0, 0x80, 0xF0, 0x80, 0x80  // F
+  };
   
   // 4096 memory locations of 8
   // first 512 reserved for font set
@@ -84,9 +77,7 @@ private:
   unsigned char delay_timer;
   unsigned char sound_timer;
   
-  
   unsigned char keys[NUM_OF_KEYS];     // Input
-  
   
   // Display Resolution : 64 x 32
   // Graphics are drawn to the screen solely by drawing sprites,
@@ -100,13 +91,12 @@ private:
   
   bool drawFlag;
   
+  /* Loads game at <filename> into memory starting at START_PC_OFFSET */
+  bool loadGame(char * filename);
   
-  /* Returns appropriate function pointer with appropriate args using opcode */
-  void decodeInstruction(unsigned short opcode)
-  {
-     
-  }
-  
+  /* Returns appropriate function pointer with appropriate args using opcode 
+   TODO: void decodeInstruction(unsigned short opcode);
+   */
 };
 
 
